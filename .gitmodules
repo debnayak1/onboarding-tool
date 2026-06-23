@@ -1,0 +1,3 @@
+[submodule "modules/dayzero"]
+	path = modules/dayzero
+	url = https://github.com/debnayak1/dayzero.git
