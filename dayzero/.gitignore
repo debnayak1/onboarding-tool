@@ -1,0 +1,62 @@
+# Python - Backend
+code_files/backend/venv/
+code_files/backend/__pycache__/
+code_files/backend/*.pyc
+code_files/backend/*.pyo
+code_files/backend/*.pyd
+code_files/backend/.Python
+code_files/backend/env/
+code_files/backend/build/
+code_files/backend/develop-eggs/
+code_files/backend/dist/
+code_files/backend/downloads/
+code_files/backend/eggs/
+code_files/backend/.eggs/
+code_files/backend/lib/
+code_files/backend/lib64/
+code_files/backend/parts/
+code_files/backend/sdist/
+code_files/backend/var/
+code_files/backend/wheels/
+code_files/backend/*.egg-info/
+code_files/backend/.installed.cfg
+code_files/backend/*.egg
+
+# Node.js - Frontend
+code_files/frontend/node_modules/
+code_files/frontend/dist/
+code_files/frontend/build/
+code_files/frontend/.cache/
+code_files/frontend/.vite/
+code_files/frontend/.DS_Store
+code_files/frontend/npm-debug.log*
+code_files/frontend/yarn-debug.log*
+code_files/frontend/yarn-error.log*
+
+# IDE
+.vscode/
+.idea/
+**/*.swp
+**/*.swo
+**/*~
+
+# OS
+**/.DS_Store
+**/Thumbs.db
+
+# Environment variables
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Logs
+**/*.log
+**/logs/
+
+# Database
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+
+# Bob sessions
+bob_sessions/

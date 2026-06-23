@@ -1,0 +1,53 @@
+{
+  "john_doe_module_react_basics": {
+    "user_id": "john_doe",
+    "module_id": "module_react_basics",
+    "team_id": "team_frontend",
+    "assigned_reason": "team_required",
+    "assigned_at": "2026-06-09T21:26:36.987247",
+    "status": "in_progress",
+    "progress_percentage": 50,
+    "time_spent": 10,
+    "last_accessed": "2026-06-09T21:35:47.616357"
+  },
+  "jane.smith_module_react_basics": {
+    "user_id": "jane.smith",
+    "module_id": "module_react_basics",
+    "team_id": "team_frontend",
+    "assigned_reason": "team_required",
+    "assigned_at": "2026-06-09T21:34:06.586486",
+    "status": "not_started",
+    "progress_percentage": 0,
+    "time_spent": 0
+  },
+  "alice.johnson_module_python_basics": {
+    "user_id": "alice.johnson",
+    "module_id": "module_python_basics",
+    "team_id": "team_backend",
+    "assigned_reason": "team_required",
+    "assigned_at": "2026-06-09T21:34:40.950595",
+    "status": "not_started",
+    "progress_percentage": 0,
+    "time_spent": 0
+  },
+  "alice.johnson_module_fastapi": {
+    "user_id": "alice.johnson",
+    "module_id": "module_fastapi",
+    "team_id": "team_backend",
+    "assigned_reason": "repo_based_python",
+    "assigned_at": "2026-06-09T21:34:40.950605",
+    "status": "not_started",
+    "progress_percentage": 0,
+    "time_spent": 0
+  },
+  "alice.johnson_module_java_spring": {
+    "user_id": "alice.johnson",
+    "module_id": "module_java_spring",
+    "team_id": "team_backend",
+    "assigned_reason": "repo_based_java",
+    "assigned_at": "2026-06-09T21:34:40.950607",
+    "status": "not_started",
+    "progress_percentage": 0,
+    "time_spent": 0
+  }
+}

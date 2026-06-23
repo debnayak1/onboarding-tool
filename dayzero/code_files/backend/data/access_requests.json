@@ -1,0 +1,122 @@
+{
+  "req_0001": {
+    "id": "req_0001",
+    "user_id": "john_doe",
+    "team_id": "team_frontend",
+    "platform": "github",
+    "access_type": "write",
+    "justification": "Required for Frontend Engineering team membership",
+    "urgency": "high",
+    "status": "pending",
+    "requested_at": "2026-06-09T21:26:36.986246",
+    "admin_notes": "Auto-generated from team requirements"
+  },
+  "req_0002": {
+    "id": "req_0002",
+    "user_id": "john_doe",
+    "team_id": "team_frontend",
+    "platform": "ibm_cloud",
+    "access_type": "read",
+    "justification": "Required for Frontend Engineering team membership",
+    "urgency": "normal",
+    "status": "approved",
+    "requested_at": "2026-06-09T21:26:36.986253",
+    "admin_notes": "Auto-generated from team requirements"
+  },
+  "req_0003": {
+    "id": "req_0003",
+    "user_id": "john_doe",
+    "team_id": "team_frontend",
+    "platform": "jira",
+    "access_type": "write",
+    "justification": "Required for Frontend Engineering team membership",
+    "urgency": "high",
+    "status": "approved",
+    "requested_at": "2026-06-09T21:26:36.986258",
+    "admin_notes": "Auto-generated from team requirements"
+  },
+  "req_0004": {
+    "id": "req_0004",
+    "user_id": "jane.smith",
+    "team_id": "team_frontend",
+    "platform": "github",
+    "access_type": "write",
+    "justification": "Required for Frontend Engineering team membership",
+    "urgency": "high",
+    "status": "pending",
+    "requested_at": "2026-06-09T21:34:06.586196",
+    "admin_notes": "Auto-generated from team requirements"
+  },
+  "req_0005": {
+    "id": "req_0005",
+    "user_id": "jane.smith",
+    "team_id": "team_frontend",
+    "platform": "ibm_cloud",
+    "access_type": "read",
+    "justification": "Required for Frontend Engineering team membership",
+    "urgency": "normal",
+    "status": "approved",
+    "requested_at": "2026-06-09T21:34:06.586214",
+    "admin_notes": "Auto-generated from team requirements"
+  },
+  "req_0006": {
+    "id": "req_0006",
+    "user_id": "jane.smith",
+    "team_id": "team_frontend",
+    "platform": "jira",
+    "access_type": "write",
+    "justification": "Required for Frontend Engineering team membership",
+    "urgency": "high",
+    "status": "approved",
+    "requested_at": "2026-06-09T21:34:06.586216",
+    "admin_notes": "Auto-generated from team requirements"
+  },
+  "req_0007": {
+    "id": "req_0007",
+    "user_id": "alice.johnson",
+    "team_id": "team_backend",
+    "platform": "github",
+    "access_type": "write",
+    "justification": "Required for Backend Engineering team membership",
+    "urgency": "high",
+    "status": "pending",
+    "requested_at": "2026-06-09T21:34:40.950344",
+    "admin_notes": "Auto-generated from team requirements"
+  },
+  "req_0008": {
+    "id": "req_0008",
+    "user_id": "alice.johnson",
+    "team_id": "team_backend",
+    "platform": "ibm_cloud",
+    "access_type": "read",
+    "justification": "Required for Backend Engineering team membership",
+    "urgency": "high",
+    "status": "pending",
+    "requested_at": "2026-06-09T21:34:40.950356",
+    "admin_notes": "Auto-generated from team requirements"
+  },
+  "req_0009": {
+    "id": "req_0009",
+    "user_id": "alice.johnson",
+    "team_id": "team_backend",
+    "platform": "artifactory",
+    "access_type": "read",
+    "justification": "Required for Backend Engineering team membership",
+    "urgency": "high",
+    "status": "approved",
+    "requested_at": "2026-06-09T21:34:40.950359",
+    "admin_notes": "Auto-generated from team requirements"
+  },
+  "req_0010": {
+    "id": "req_0010",
+    "user_id": "alice.johnson",
+    "team_id": "team_backend",
+    "platform": "jira",
+    "access_type": "write",
+    "justification": "Required for Backend Engineering team membership",
+    "urgency": "high",
+    "status": "approved",
+    "requested_at": "2026-06-09T21:34:40.950360",
+    "admin_notes": "Auto-generated from team requirements"
+  }
+}

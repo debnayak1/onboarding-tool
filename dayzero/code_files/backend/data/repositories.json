@@ -1,0 +1,37 @@
+{
+  "repo_api_gateway": {
+    "id": "repo_api_gateway",
+    "name": "api-gateway",
+    "url": "https://github.com/company/api-gateway",
+    "team_id": "team_backend",
+    "language": "python",
+    "description": "Main API Gateway service",
+    "created_at": "2026-06-09T18:57:53.937735"
+  },
+  "repo_user_service": {
+    "id": "repo_user_service",
+    "name": "user-service",
+    "url": "https://github.com/company/user-service",
+    "team_id": "team_backend",
+    "language": "java",
+    "description": "User management microservice",
+    "created_at": "2026-06-09T18:57:53.937737"
+  },
+  "repo_frontend_app": {
+    "id": "repo_frontend_app",
+    "name": "frontend-app",
+    "url": "https://github.com/company/frontend-app",
+    "team_id": "team_frontend",
+    "language": "javascript",
+    "description": "Main React frontend application",
+    "created_at": "2026-06-09T18:57:53.937738"
+  },
+  "repo_data_pipeline": {
+    "id": "repo_data_pipeline",
+    "name": "data-pipeline",
+    "url": "https://github.com/company/data-pipeline",
+    "language": "python",
+    "description": "Data processing pipeline",
+    "created_at": "2026-06-09T21:00:54.801937"
+  }
+}

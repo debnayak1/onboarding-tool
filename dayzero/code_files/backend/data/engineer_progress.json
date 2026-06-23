@@ -1,0 +1,45 @@
+{
+  "john_doe_team_frontend": {
+    "user_id": "john_doe",
+    "team_id": "team_frontend",
+    "onboarding_status": "in_progress",
+    "access_status": {
+      "github": "pending",
+      "ibm_cloud": "approved",
+      "jira": "approved"
+    },
+    "module_progress": {},
+    "repo_access": [],
+    "started_at": "2026-06-09T21:26:36.986198",
+    "last_updated": "2026-06-09T21:26:36.986226"
+  },
+  "jane.smith_team_frontend": {
+    "user_id": "jane.smith",
+    "team_id": "team_frontend",
+    "onboarding_status": "in_progress",
+    "access_status": {
+      "github": "pending",
+      "ibm_cloud": "approved",
+      "jira": "approved"
+    },
+    "module_progress": {},
+    "repo_access": [],
+    "started_at": "2026-06-09T21:34:06.586153",
+    "last_updated": "2026-06-09T21:34:06.586174"
+  },
+  "alice.johnson_team_backend": {
+    "user_id": "alice.johnson",
+    "team_id": "team_backend",
+    "onboarding_status": "in_progress",
+    "access_status": {
+      "github": "pending",
+      "ibm_cloud": "pending",
+      "artifactory": "approved",
+      "jira": "approved"
+    },
+    "module_progress": {},
+    "repo_access": [],
+    "started_at": "2026-06-09T21:34:40.950306",
+    "last_updated": "2026-06-09T21:34:40.950322"
+  }
+}
