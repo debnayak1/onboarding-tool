@@ -1,0 +1,22 @@
+{
+  "admin": {
+    "id": "admin",
+    "username": "admin",
+    "full_name": "Admin User",
+    "email": "admin@company.com",
+    "department": "IT",
+    "role": "admin",
+    "password": "admin123",
+    "created_at": "2026-06-09T22:59:25.978977"
+  },
+  "john_doe": {
+    "id": "john_doe",
+    "username": "john_doe",
+    "full_name": "John Doe",
+    "email": "john.doe@company.com",
+    "department": "Engineering",
+    "role": "engineer",
+    "password": "password123",
+    "created_at": "2026-06-09T22:59:25.978979"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "admin": {
+    "id": "admin",
+    "username": "admin",
+    "full_name": "Admin User",
+    "email": "admin@company.com",
+    "department": "IT",
+    "role": "admin",
+    "password": "admin123",
+    "created_at": "2026-06-09T18:57:53.938245"
+  },
+  "john_doe": {
+    "id": "john_doe",
+    "username": "john_doe",
+    "full_name": "John Doe",
+    "email": "john.doe@company.com",
+    "department": "Engineering",
+    "role": "engineer",
+    "password": "password123",
+    "created_at": "2026-06-09T18:57:53.938247",
+    "team_id": "team_frontend"
+  },
+  "jane.smith": {
+    "id": "jane.smith",
+    "username": "jane.smith",
+    "full_name": "Jane Smith",
+    "email": "jane.smith@company.com",
+    "department": "Engineering",
+    "role": "engineer",
+    "password": "password123",
+    "created_at": "2026-06-09T21:16:24.421262",
+    "team_id": "team_frontend"
+  },
+  "bob.wilson": {
+    "id": "bob.wilson",
+    "username": "bob.wilson",
+    "full_name": "Bob Wilson",
+    "email": "bob.wilson@company.com",
+    "department": "Engineering",
+    "role": "engineer",
+    "password": "password123",
+    "created_at": "2026-06-09T21:16:24.421268"
+  },
+  "alice.johnson": {
+    "id": "alice.johnson",
+    "username": "alice.johnson",
+    "full_name": "Alice Johnson",
+    "email": "alice.johnson@company.com",
+    "department": "Engineering",
+    "role": "engineer",
+    "password": "password123",
+    "created_at": "2026-06-09T21:16:24.421269",
+    "team_id": "team_backend"
+  }
+}

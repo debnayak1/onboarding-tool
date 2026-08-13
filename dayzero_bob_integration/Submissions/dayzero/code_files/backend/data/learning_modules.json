@@ -1,0 +1,68 @@
+{
+  "module_python_basics": {
+    "id": "module_python_basics",
+    "title": "Python Fundamentals",
+    "description": "Learn Python basics for backend development",
+    "content": "<h2>Python Basics</h2><p>Introduction to Python programming...</p>",
+    "language": "python",
+    "difficulty": "beginner",
+    "estimated_duration": 45,
+    "prerequisites": [],
+    "learning_objectives": [
+      "Understand Python syntax",
+      "Work with data structures",
+      "Write functions and classes"
+    ],
+    "created_at": "2026-06-09T22:59:25.978718"
+  },
+  "module_fastapi": {
+    "id": "module_fastapi",
+    "title": "FastAPI Development",
+    "description": "Build REST APIs with FastAPI",
+    "content": "<h2>FastAPI</h2><p>Learn to build modern APIs...</p>",
+    "language": "python",
+    "difficulty": "intermediate",
+    "estimated_duration": 60,
+    "prerequisites": [
+      "module_python_basics"
+    ],
+    "learning_objectives": [
+      "Create REST APIs",
+      "Handle authentication",
+      "Write API documentation"
+    ],
+    "created_at": "2026-06-09T22:59:25.978719"
+  },
+  "module_react_basics": {
+    "id": "module_react_basics",
+    "title": "React Fundamentals",
+    "description": "Learn React for frontend development",
+    "content": "<h2>React Basics</h2><p>Introduction to React...</p>",
+    "language": "javascript",
+    "difficulty": "beginner",
+    "estimated_duration": 50,
+    "prerequisites": [],
+    "learning_objectives": [
+      "Understand React components",
+      "Manage state with hooks",
+      "Build interactive UIs"
+    ],
+    "created_at": "2026-06-09T22:59:25.978720"
+  },
+  "module_java_spring": {
+    "id": "module_java_spring",
+    "title": "Spring Boot Microservices",
+    "description": "Build microservices with Spring Boot",
+    "content": "<h2>Spring Boot</h2><p>Learn Spring Boot...</p>",
+    "language": "java",
+    "difficulty": "intermediate",
+    "estimated_duration": 90,
+    "prerequisites": [],
+    "learning_objectives": [
+      "Create Spring Boot applications",
+      "Implement REST controllers",
+      "Configure microservices"
+    ],
+    "created_at": "2026-06-09T22:59:25.978721"
+  }
+}

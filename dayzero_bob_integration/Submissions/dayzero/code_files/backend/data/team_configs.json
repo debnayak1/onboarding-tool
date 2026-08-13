@@ -1,0 +1,72 @@
+{
+  "team_backend": {
+    "team_id": "team_backend",
+    "access_requirements": [
+      {
+        "platform": "github",
+        "access_type": "write",
+        "required": true,
+        "auto_approve": false
+      },
+      {
+        "platform": "ibm_cloud",
+        "access_type": "read",
+        "required": true,
+        "auto_approve": false
+      },
+      {
+        "platform": "artifactory",
+        "access_type": "read",
+        "required": true,
+        "auto_approve": true
+      },
+      {
+        "platform": "jira",
+        "access_type": "write",
+        "required": true,
+        "auto_approve": true
+      }
+    ],
+    "repositories": [
+      "repo_api_gateway",
+      "repo_user_service"
+    ],
+    "required_modules": [
+      "module_python_basics"
+    ],
+    "auto_assigned_modules": [
+      "module_fastapi",
+      "module_java_spring"
+    ]
+  },
+  "team_frontend": {
+    "team_id": "team_frontend",
+    "access_requirements": [
+      {
+        "platform": "github",
+        "access_type": "write",
+        "required": true,
+        "auto_approve": false
+      },
+      {
+        "platform": "ibm_cloud",
+        "access_type": "read",
+        "required": false,
+        "auto_approve": true
+      },
+      {
+        "platform": "jira",
+        "access_type": "write",
+        "required": true,
+        "auto_approve": true
+      }
+    ],
+    "repositories": [
+      "repo_frontend_app"
+    ],
+    "required_modules": [
+      "module_react_basics"
+    ],
+    "auto_assigned_modules": []
+  }
+}

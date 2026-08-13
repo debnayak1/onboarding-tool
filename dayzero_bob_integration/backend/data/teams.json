@@ -1,0 +1,50 @@
+{
+  "team_backend": {
+    "id": "team_backend",
+    "name": "Backend Engineering",
+    "description": "Backend development team working on microservices",
+    "department": "Engineering",
+    "created_at": "2026-06-09T18:57:53.937518",
+    "created_by": "admin"
+  },
+  "team_frontend": {
+    "id": "team_frontend",
+    "name": "Frontend Engineering",
+    "description": "Frontend development team working on React applications",
+    "department": "Engineering",
+    "created_at": "2026-06-09T18:57:53.937527",
+    "created_by": "admin"
+  },
+  "test": {
+    "id": "test",
+    "name": "testing",
+    "description": "aaa",
+    "department": "tt",
+    "created_by": "admin",
+    "created_at": "2026-06-09T18:59:56.537932"
+  },
+  "Development test": {
+    "id": "Development test",
+    "name": "Development test",
+    "description": "teting",
+    "department": "zos",
+    "created_by": "admin",
+    "created_at": "2026-06-09T20:46:04.112668"
+  },
+  "team_fullstack": {
+    "id": "team_fullstack",
+    "name": "Full Stack Engineering",
+    "description": "End-to-end application development",
+    "department": "Engineering",
+    "created_by": "admin",
+    "created_at": "2026-06-09T21:00:54.823566"
+  },
+  "admin": {
+    "id": "admin",
+    "name": "admin group",
+    "description": "admin group",
+    "department": "zmig",
+    "created_by": "admin",
+    "created_at": "2026-06-09T22:32:12.535581"
+  }
+}
