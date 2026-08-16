@@ -90,7 +90,7 @@ class QuizSubmission(BaseModel):
 
 class AccessRequest(BaseModel):
     user_id: str
-    platform: str  # git, ibm_cloud, artifactory
+    platform: str  # git, cloud_platform, artifactory
     access_type: str  # read, write, admin
     justification: str
     status: str = "pending"  # pending, approved, rejected, provisioned
@@ -1035,7 +1035,7 @@ team_configs_db_v2 = {
         "team_id": "team_backend",
         "access_requirements": [
             {"platform": "github", "access_type": "write", "required": True, "auto_approve": False},
-            {"platform": "ibm_cloud", "access_type": "read", "required": True, "auto_approve": False},
+            {"platform": "cloud_platform", "access_type": "read", "required": True, "auto_approve": False},
             {"platform": "artifactory", "access_type": "read", "required": True, "auto_approve": True},
             {"platform": "jira", "access_type": "write", "required": True, "auto_approve": True}
         ],
@@ -1047,7 +1047,7 @@ team_configs_db_v2 = {
         "team_id": "team_frontend",
         "access_requirements": [
             {"platform": "github", "access_type": "write", "required": True, "auto_approve": False},
-            {"platform": "ibm_cloud", "access_type": "read", "required": False, "auto_approve": True},
+            {"platform": "cloud_platform", "access_type": "read", "required": False, "auto_approve": True},
             {"platform": "jira", "access_type": "write", "required": True, "auto_approve": True}
         ],
         "repositories": ["repo_frontend_app"],
@@ -1386,4 +1386,3 @@ if __name__ == "__main__":
     port = int(os.getenv("PORT", 8080))
     uvicorn.run(app, host="0.0.0.0", port=port)
 
-# Made with Bob

@@ -58,5 +58,5 @@ code_files/frontend/yarn-error.log*
 **/*.sqlite
 **/*.sqlite3
 
-# Bob sessions
+# AI assistant sessions
 bob_sessions/

@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Loader } from 'lucide-react';
-import { chatWithBob } from '../services/api';
+import { chatWithCopilot } from '../services/api';
 
 /**
- * BobCopilot — floating AI co-pilot chat panel.
+ * AICopilot — floating AI co-pilot chat panel.
  * Renders a chat bubble in the bottom-right corner of every page.
  * Passes the current user's role and the page name so the backend
  * can return context-aware responses.
@@ -12,16 +12,16 @@ import { chatWithBob } from '../services/api';
  *   user        {object}  — current logged-in user (id, role, full_name)
  *   pageContext  {string}  — page identifier e.g. "engineer_dashboard"
  */
-function BobCopilot({ user, pageContext = '' }) {
+function AICopilot({ user, pageContext = '' }) {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState([
     {
-      from: 'bob',
+      from: 'assistant',
       text: user?.role === 'admin'
-        ? "Hi! I'm Bob, your onboarding co-pilot 👋  Ask me about pending requests, team status, or say *approve req_0001*."
-        : "Hi! I'm Bob, your onboarding co-pilot 👋  Ask me about your modules, learning path, or how to request access.",
+        ? "Hi! I'm your onboarding co-pilot 👋  Ask me about pending requests, team status, or say *approve req_0001*."
+        : "Hi! I'm your onboarding co-pilot 👋  Ask me about your modules, learning path, or how to request access.",
       type: 'greeting',
     },
   ]);
@@ -44,7 +44,7 @@ function BobCopilot({ user, pageContext = '' }) {
     setLoading(true);
 
     try {
-      const res = await chatWithBob(
+      const res = await chatWithCopilot(
         text,
         user?.id || user?.username,
         user?.role,
@@ -54,7 +54,7 @@ function BobCopilot({ user, pageContext = '' }) {
       setMessages(prev => [
         ...prev,
         {
-          from: 'bob',
+          from: 'assistant',
           text: data.message,
           type: data.type,
           payload: data.data,
@@ -64,7 +64,7 @@ function BobCopilot({ user, pageContext = '' }) {
       setMessages(prev => [
         ...prev,
         {
-          from: 'bob',
+          from: 'assistant',
           text: "Sorry, I couldn't reach the backend right now. Make sure the server is running on port 8080.",
           type: 'error',
         },
@@ -117,7 +117,7 @@ function BobCopilot({ user, pageContext = '' }) {
       {/* ── Floating trigger button ── */}
       <button
         onClick={() => setOpen(o => !o)}
-        title="Ask Bob"
+        title="Ask co-pilot"
         style={{
           position: 'fixed',
           bottom: 24,
@@ -172,7 +172,7 @@ function BobCopilot({ user, pageContext = '' }) {
           }}>
             <MessageCircle size={18} color="#fff" />
             <div>
-              <div style={{ color: '#fff', fontWeight: 700, fontSize: 14 }}>Bob Co-pilot</div>
+              <div style={{ color: '#fff', fontWeight: 700, fontSize: 14 }}>AI Co-pilot</div>
               <div style={{ color: 'rgba(255,255,255,0.75)', fontSize: 11 }}>
                 Onboarding AI assistant
               </div>
@@ -208,18 +208,18 @@ function BobCopilot({ user, pageContext = '' }) {
                     color: msg.from === 'user' ? '#fff' : (typeColour[msg.type] || '#1f2328'),
                     fontSize: 13,
                     lineHeight: 1.55,
-                    border: msg.from === 'bob' ? '1px solid #e5e7eb' : 'none',
+                    border: msg.from === 'assistant' ? '1px solid #e5e7eb' : 'none',
                     boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
                   }}
                 >
-                  {msg.from === 'bob' ? renderText(msg.text) : msg.text}
+                  {msg.from === 'assistant' ? renderText(msg.text) : msg.text}
                 </div>
               </div>
             ))}
             {loading && (
               <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#57606a', fontSize: 12 }}>
                 <Loader size={13} style={{ animation: 'spin 1s linear infinite' }} />
-                Bob is thinking…
+                Co-pilot is thinking…
               </div>
             )}
             <div ref={bottomRef} />
@@ -238,7 +238,7 @@ function BobCopilot({ user, pageContext = '' }) {
               value={input}
               onChange={e => setInput(e.target.value)}
               onKeyDown={handleKey}
-              placeholder="Ask Bob…"
+              placeholder="Ask co-pilot…"
               rows={1}
               style={{
                 flex: 1,
@@ -279,4 +279,4 @@ function BobCopilot({ user, pageContext = '' }) {
   );
 }
 
-export default BobCopilot;
+export default AICopilot;

@@ -128,4 +128,3 @@ function DiagnosticPage() {
 
 export default DiagnosticPage;
 
-// Made with Bob

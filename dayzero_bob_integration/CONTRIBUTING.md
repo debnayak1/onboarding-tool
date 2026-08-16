@@ -43,7 +43,7 @@ App: http://localhost:3000
 ├── backend/
 │   ├── main.py              # All FastAPI endpoints (~1600 lines)
 │   ├── enhanced_api.py      # Team/repo/module router (/api/v2)
-│   ├── bob_mcp_server.py    # MCP stdio server — Bob IDE tools
+│   ├── ai_mcp_server.py     # MCP stdio server — IDE tools
 │   ├── db_manager.py        # JSON file persistence
 │   ├── models.py            # Pydantic models (v2 endpoints)
 │   ├── data/                # Persisted JSON files
@@ -52,35 +52,35 @@ App: http://localhost:3000
 │   ├── pages/               # AdminDashboard, EngineerDashboard, Login, …
 │   ├── components/
 │   │   ├── Header.jsx
-│   │   └── BobCopilot.jsx   # Floating Bob chat widget
+│   │   └── AICopilot.jsx    # Floating AI chat widget
 │   └── services/api.js      # Axios wrappers for all endpoints
 ├── .bob/
-│   ├── skills/onboarding-platform.md   # Bob codebase skill
+│   ├── skills/onboarding-platform.md   # Codebase skill for AI sessions
 │   └── context/session-context.md      # Cross-session handoff doc
 └── README.md
 ```
 
 ---
 
-## Bob AI Co-pilot
+## AI Co-pilot
 
 ### In-app chat
-The floating chat bubble (bottom-right) is live on every page. Talks to `POST /bob/chat` on the backend.
+The floating chat bubble (bottom-right) is live on every page. Talks to `POST /copilot/chat` on the backend.
 
-### MCP server (Bob IDE)
-Exposes 7 tools Bob can call from the IDE editor:
+### MCP server (IDE integration)
+Exposes 7 tools the IDE assistant can call:
 ```bash
-python backend/bob_mcp_server.py   # runs MCP stdio server
+python backend/ai_mcp_server.py   # runs MCP stdio server
 ```
-Register in Bob IDE settings:
+Register in your IDE MCP settings:
 ```json
 { "name": "onboarding-platform", "transport": "stdio",
-  "command": "python", "args": ["backend/bob_mcp_server.py"] }
+  "command": "python", "args": ["backend/ai_mcp_server.py"] }
 ```
 
 ### Upgrade to a real LLM
 Replace `_resolve_response()` in [`backend/main.py`](backend/main.py) with a
-`watsonx.ai` or `openai.chat.completions.create()` call.
+foundation model API or `openai.chat.completions.create()` call.
 The live data context (users, requests, progress) is already assembled above that function.
 
 ---
@@ -96,11 +96,11 @@ The live data context (users, requests, progress) is already assembled above tha
 | `GET`  | `/admin/stats` | System stats |
 | `POST` | `/api/v2/engineers/{uid}/assign-team/{tid}` | Assign engineer → triggers workflow |
 | `GET`  | `/api/v2/engineers/{uid}/dashboard` | Engineer dashboard data |
-| `POST` | `/bob/chat` | Bob co-pilot chat |
+| `POST` | `/copilot/chat` | AI co-pilot chat |
 
 ---
 
 ## Cross-session Continuity
 
-Read [`.bob/context/session-context.md`](.bob/context/session-context.md) at the start of every Bob session.
+Read [`.bob/context/session-context.md`](.bob/context/session-context.md) at the start of every AI session.
 Update it at the end — record what changed and what's next.

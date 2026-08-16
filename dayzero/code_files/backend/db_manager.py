@@ -175,7 +175,7 @@ def get_sample_team_configs():
             "team_id": "team_backend",
             "access_requirements": [
                 {"platform": "github", "access_type": "write", "required": True, "auto_approve": False},
-                {"platform": "ibm_cloud", "access_type": "read", "required": True, "auto_approve": False},
+                {"platform": "cloud_platform", "access_type": "read", "required": True, "auto_approve": False},
                 {"platform": "artifactory", "access_type": "read", "required": True, "auto_approve": True},
                 {"platform": "jira", "access_type": "write", "required": True, "auto_approve": True}
             ],
@@ -187,7 +187,7 @@ def get_sample_team_configs():
             "team_id": "team_frontend",
             "access_requirements": [
                 {"platform": "github", "access_type": "write", "required": True, "auto_approve": False},
-                {"platform": "ibm_cloud", "access_type": "read", "required": False, "auto_approve": True},
+                {"platform": "cloud_platform", "access_type": "read", "required": False, "auto_approve": True},
                 {"platform": "jira", "access_type": "write", "required": True, "auto_approve": True}
             ],
             "repositories": ["repo_frontend_app"],
@@ -240,4 +240,3 @@ def initialize_all_collections():
     
     return teams, repos, modules, configs, users, access_requests
 
-# Made with Bob

@@ -5,7 +5,7 @@
     "onboarding_status": "in_progress",
     "access_status": {
       "github": "pending",
-      "ibm_cloud": "approved",
+      "cloud_platform": "approved",
       "jira": "approved"
     },
     "module_progress": {},
@@ -19,7 +19,7 @@
     "onboarding_status": "in_progress",
     "access_status": {
       "github": "pending",
-      "ibm_cloud": "approved",
+      "cloud_platform": "approved",
       "jira": "approved"
     },
     "module_progress": {},
@@ -33,7 +33,7 @@
     "onboarding_status": "in_progress",
     "access_status": {
       "github": "pending",
-      "ibm_cloud": "pending",
+      "cloud_platform": "pending",
       "artifactory": "approved",
       "jira": "approved"
     },

@@ -50,4 +50,3 @@ echo "2. Backend might be using wrong directory"
 echo "3. Try: grep 'db_dir' backend/main.py"
 echo "========================================="
 
-# Made with Bob

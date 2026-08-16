@@ -198,4 +198,3 @@ function Learning({ user }) {
 
 export default Learning;
 
-// Made with Bob

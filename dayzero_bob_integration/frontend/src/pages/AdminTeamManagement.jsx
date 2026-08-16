@@ -427,7 +427,7 @@ function AdminTeamManagement({ user }) {
                       onChange={(e) => updateAccessRequirement(index, 'platform', e.target.value)}
                     >
                       <option value="github">GitHub</option>
-                      <option value="ibm_cloud">IBM Cloud</option>
+                      <option value="cloud_platform">Cloud Platform</option>
                       <option value="artifactory">Artifactory</option>
                       <option value="jira">Jira</option>
                       <option value="access_hub">Access Hub</option>
@@ -664,4 +664,3 @@ function AdminTeamManagement({ user }) {
 
 export default AdminTeamManagement;
 
-// Made with Bob

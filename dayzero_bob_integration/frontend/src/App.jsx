@@ -11,7 +11,7 @@ import AdminTeamManagementSimple from './pages/AdminTeamManagementSimple';
 import EngineerDashboard from './pages/EngineerDashboard';
 import DiagnosticPage from './pages/DiagnosticPage';
 import Header from './components/Header';
-import BobCopilot from './components/BobCopilot';
+import AICopilot from './components/AICopilot';
 import { getCurrentUser } from './services/api';
 
 function App() {
@@ -52,7 +52,7 @@ function App() {
   return (
     <Router>
       {user && <Header user={user} onLogout={handleLogout} />}
-      {user && <BobCopilotWrapper user={user} />}
+      {user && <AICopilotWrapper user={user} />}
       <Routes>
         <Route
           path="/login"
@@ -99,12 +99,11 @@ function App() {
   );
 }
 
-/** Wrapper reads the current pathname inside Router context and passes it to BobCopilot */
-function BobCopilotWrapper({ user }) {
+/** Wrapper reads the current pathname inside Router context and passes it to AICopilot */
+function AICopilotWrapper({ user }) {
   const location = useLocation();
-  return <BobCopilot user={user} pageContext={location.pathname} />;
+  return <AICopilot user={user} pageContext={location.pathname} />;
 }
 
 export default App;
 
-// Made with Bob

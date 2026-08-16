@@ -62,7 +62,7 @@ function AccessRequest({ user }) {
     switch (platform.toLowerCase()) {
       case 'github':
         return <GitBranch size={20} />;
-      case 'ibm_cloud':
+      case 'cloud_platform':
         return <Cloud size={20} />;
       case 'artifactory':
         return <Package size={20} />;
@@ -113,7 +113,7 @@ function AccessRequest({ user }) {
               required
             >
               <option value="github">GitHub</option>
-              <option value="ibm_cloud">IBM Cloud</option>
+              <option value="cloud_platform">Cloud Platform</option>
               <option value="artifactory">Artifactory</option>
             </select>
 
@@ -265,4 +265,3 @@ function AccessRequest({ user }) {
 
 export default AccessRequest;
 
-// Made with Bob

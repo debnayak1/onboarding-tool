@@ -153,7 +153,7 @@ def initialize_sample_data():
         "team_id": "team_backend",
         "access_requirements": [
             {"platform": "github", "access_type": "write", "required": True, "auto_approve": False},
-            {"platform": "ibm_cloud", "access_type": "read", "required": True, "auto_approve": False},
+            {"platform": "cloud_platform", "access_type": "read", "required": True, "auto_approve": False},
             {"platform": "artifactory", "access_type": "read", "required": True, "auto_approve": True},
             {"platform": "jira", "access_type": "write", "required": True, "auto_approve": True}
         ],
@@ -166,7 +166,7 @@ def initialize_sample_data():
         "team_id": "team_frontend",
         "access_requirements": [
             {"platform": "github", "access_type": "write", "required": True, "auto_approve": False},
-            {"platform": "ibm_cloud", "access_type": "read", "required": False, "auto_approve": True},
+            {"platform": "cloud_platform", "access_type": "read", "required": False, "auto_approve": True},
             {"platform": "jira", "access_type": "write", "required": True, "auto_approve": True}
         ],
         "repositories": ["repo_frontend_app"],
@@ -574,4 +574,3 @@ async def get_team_members_progress(team_id: str):
         "total_members": len(members)
     }
 
-# Made with Bob

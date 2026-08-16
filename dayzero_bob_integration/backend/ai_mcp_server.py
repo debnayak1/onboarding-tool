@@ -1,14 +1,14 @@
 """
-Bob MCP Server — Onboarding Platform Tools
-Exposes key onboarding operations as callable tools for Bob.
+AI MCP Server — Onboarding Platform Tools
+Exposes key onboarding operations as callable tools for an AI assistant.
 
-Each tool maps directly to an existing FastAPI endpoint so Bob can
+Each tool maps directly to an existing FastAPI endpoint so the assistant can
 take real actions (approve requests, query progress, assign teams)
 during a natural-language conversation.
 
 Usage:
-  python bob_mcp_server.py
-  Runs an MCP-compatible stdio server that Bob's IDE extension connects to.
+  python ai_mcp_server.py
+  Runs an MCP-compatible stdio server that an IDE extension can connect to.
 """
 
 import json
@@ -225,7 +225,7 @@ def call_tool(name: str, args: Dict) -> Any:
 
     elif name == "approve_access_request":
         rid = args["request_id"]
-        notes = args.get("admin_notes", "Approved by Bob AI assistant")
+        notes = args.get("admin_notes", "Approved by AI assistant")
         return _put(f"/access/requests/{rid}", {"status": "approved", "admin_notes": notes})
 
     elif name == "reject_access_request":

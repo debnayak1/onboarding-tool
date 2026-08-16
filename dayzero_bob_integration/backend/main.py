@@ -91,7 +91,7 @@ class QuizSubmission(BaseModel):
 
 class AccessRequest(BaseModel):
     user_id: str
-    platform: str  # git, ibm_cloud, artifactory
+    platform: str  # git, cloud_platform, artifactory
     access_type: str  # read, write, admin
     justification: str
     status: str = "pending"  # pending, approved, rejected, provisioned
@@ -1036,7 +1036,7 @@ team_configs_db_v2 = {
         "team_id": "team_backend",
         "access_requirements": [
             {"platform": "github", "access_type": "write", "required": True, "auto_approve": False},
-            {"platform": "ibm_cloud", "access_type": "read", "required": True, "auto_approve": False},
+            {"platform": "cloud_platform", "access_type": "read", "required": True, "auto_approve": False},
             {"platform": "artifactory", "access_type": "read", "required": True, "auto_approve": True},
             {"platform": "jira", "access_type": "write", "required": True, "auto_approve": True}
         ],
@@ -1048,7 +1048,7 @@ team_configs_db_v2 = {
         "team_id": "team_frontend",
         "access_requirements": [
             {"platform": "github", "access_type": "write", "required": True, "auto_approve": False},
-            {"platform": "ibm_cloud", "access_type": "read", "required": False, "auto_approve": True},
+            {"platform": "cloud_platform", "access_type": "read", "required": False, "auto_approve": True},
             {"platform": "jira", "access_type": "write", "required": True, "auto_approve": True}
         ],
         "repositories": ["repo_frontend_app"],
@@ -1383,21 +1383,21 @@ print("✓ Team-based onboarding API endpoints loaded")
 
 # ============= BOB AI CHAT ENDPOINT =============
 
-class BobChatRequest(BaseModel):
+class CopilotChatRequest(BaseModel):
     message: str
     user_id: Optional[str] = None
     role: Optional[str] = None      # "engineer" or "admin"
     page_context: Optional[str] = None  # current page name for context injection
 
-@app.post("/bob/chat")
-async def bob_chat(request: BobChatRequest):
+@app.post("/copilot/chat")
+async def copilot_chat(request: CopilotChatRequest):
     """
-    Bob AI co-pilot endpoint.
+    AI co-pilot endpoint.
     Accepts a natural-language message and returns a helpful response
     grounded in live onboarding platform data.
     No external LLM required for demo — uses a built-in rule-based
     responder that calls real endpoints. Swap with an actual LLM call
-    (IBM watsonx.ai, OpenAI, etc.) by replacing _resolve_response().
+    (a foundation model API, OpenAI, etc.) by replacing _resolve_response().
     """
 
     user_id  = request.user_id or "unknown"
@@ -1416,7 +1416,7 @@ async def bob_chat(request: BobChatRequest):
             if role == "admin":
                 return {
                     "reply": (
-                        f"Hi! I'm Bob, your onboarding co-pilot 👋\n\n"
+                        f"Hi! I'm your onboarding co-pilot 👋\n\n"
                         f"Right now there are **{len(pending)} pending access requests** "
                         f"({len(critical)} critical). "
                         f"There are **{len(engineers)} engineers** currently onboarding.\n\n"
@@ -1431,7 +1431,7 @@ async def bob_chat(request: BobChatRequest):
                 user = users_db.get(user_id, {})
                 return {
                     "reply": (
-                        f"Hi {user.get('full_name', 'there')}! I'm Bob, your onboarding co-pilot 👋\n\n"
+                        f"Hi {user.get('full_name', 'there')}! I'm your onboarding co-pilot 👋\n\n"
                         f"I can help you navigate your onboarding journey. Try asking me:\n"
                         f"• *What modules do I still need to complete?*\n"
                         f"• *What should I start with?*\n"
@@ -1558,7 +1558,7 @@ async def bob_chat(request: BobChatRequest):
                 rid = match.group()
                 if rid in access_requests_db:
                     access_requests_db[rid]["status"] = "approved"
-                    access_requests_db[rid]["admin_notes"] = "Approved via Bob AI co-pilot"
+                    access_requests_db[rid]["admin_notes"] = "Approved via AI co-pilot"
                     access_requests_db[rid]["updated_at"] = datetime.now().isoformat()
                     save_access_requests()
                     return {
@@ -1575,7 +1575,7 @@ async def bob_chat(request: BobChatRequest):
                 for r in critical:
                     rid = r["id"]
                     access_requests_db[rid]["status"] = "approved"
-                    access_requests_db[rid]["admin_notes"] = "Bulk approved via Bob AI co-pilot"
+                    access_requests_db[rid]["admin_notes"] = "Bulk approved via AI co-pilot"
                     access_requests_db[rid]["updated_at"] = datetime.now().isoformat()
                     approved.append(rid)
                 save_access_requests()
@@ -1616,13 +1616,13 @@ async def bob_chat(request: BobChatRequest):
             return {"reply": f"**Your Learning Progress:**\n\n{lines}", "type": "progress", "data": user_progress}
 
         # ── access request help ───────────────────────────────────────
-        if any(w in message for w in ["github", "ibm", "cloud", "artifactory", "jira", "access hub"]):
+        if any(w in message for w in ["github", "cloud", "artifactory", "jira", "access hub"]):
             return {
                 "reply": (
                     "To request access to a platform:\n\n"
                     "1. Click **Access Requests** in the top navigation\n"
                     "2. Click **New Request**\n"
-                    "3. Select the platform (GitHub, IBM Cloud, Artifactory, Jira, Access Hub)\n"
+                    "3. Select the platform (GitHub, Cloud Platform, Artifactory, Jira, Access Hub)\n"
                     "4. Choose access type and urgency\n"
                     "5. Add a justification and submit\n\n"
                     "Your admin will be notified and can approve it from the Admin Dashboard."
@@ -1659,4 +1659,3 @@ if __name__ == "__main__":
     port = int(os.getenv("PORT", 8080))
     uvicorn.run(app, host="0.0.0.0", port=port)
 
-# Made with Bob
