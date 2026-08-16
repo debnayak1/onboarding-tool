@@ -4,7 +4,7 @@ A comprehensive enterprise onboarding system that automates engineer onboarding 
 
 ## 🎥 Demo Video
 
-Watch the platform in action: [Demo Video on IBM Box](https://ibm.ent.box.com/folder/388671044992?box_source=collab-invite-response)
+Demo video available on request from the project maintainers.
 
 ---
 
@@ -14,7 +14,7 @@ Watch the platform in action: [Demo Video on IBM Box](https://ibm.ent.box.com/fo
 
 Organizations face significant challenges when onboarding new engineers:
 
-1. **Manual Access Provisioning**: IT teams spend hours manually creating access requests for multiple platforms (GitHub, IBM Cloud, Artifactory, Jira, Access Hub)
+1. **Manual Access Provisioning**: IT teams spend hours manually creating access requests for multiple platforms (GitHub, Cloud Platform, Artifactory, Jira, Access Hub)
 2. **Inconsistent Onboarding**: Different teams have different requirements, leading to confusion and delays
 3. **Lack of Progress Tracking**: No centralized system to monitor engineer onboarding completion
 4. **Knowledge Gaps**: Engineers don't know which learning modules are relevant to their team's technology stack
@@ -142,7 +142,7 @@ Engineer Assignment → Automatic Access Requests → Learning Path Assignment �
    - No manager role or approval hierarchy needed initially
 
 4. **Access Platforms**
-   - Five platforms cover most needs: GitHub, IBM Cloud, Artifactory, Jira, Access Hub
+   - Five platforms cover most needs: GitHub, Cloud Platform, Artifactory, Jira, Access Hub
    - Platform-specific APIs not integrated (simulated for demo)
 
 5. **Learning Content**
@@ -205,15 +205,15 @@ Engineer Assignment → Automatic Access Requests → Learning Path Assignment �
 
 ---
 
-## 🤖 How Bob (AI Assistant) Was Used
+## 🤖 How AI Assistant Was Used
 
-### Bob's Role in Development
+### AI Assistant Role in Development
 
-Bob, the AI coding assistant, was instrumental in accelerating development across all phases:
+The AI coding assistant was instrumental in accelerating development across all phases:
 
 #### 1. **Architecture & Design**
 - **Task**: Design scalable team-based onboarding system
-- **Bob's Contribution**:
+- **AI Assistant Contribution**:
   - Proposed data models for teams, repositories, and progress tracking
   - Designed RESTful API structure with v2 endpoints
   - Suggested conditional access control approach
@@ -221,14 +221,14 @@ Bob, the AI coding assistant, was instrumental in accelerating development acros
 
 #### 2. **Backend Development**
 - **Task**: Implement FastAPI backend with authentication
-- **Bob's Contribution**:
+- **AI Assistant Contribution**:
   - Generated complete `main.py` with JWT authentication (52KB)
   - Created `enhanced_api.py` with team management endpoints (22KB)
   - Implemented `db_manager.py` for JSON file persistence
   - Designed Pydantic models with proper validation
   - Added bcrypt password hashing with passlib
 
-**Example**: Bob generated the entire automated workflow engine that:
+**Example**: The AI assistant generated the entire automated workflow engine that:
 ```python
 # When engineer assigned to team, automatically:
 1. Create access requests for all team platforms
@@ -240,14 +240,14 @@ Bob, the AI coding assistant, was instrumental in accelerating development acros
 
 #### 3. **Frontend Development**
 - **Task**: Build responsive React application
-- **Bob's Contribution**:
+- **AI Assistant Contribution**:
   - Created 10 page components (Login, Dashboards, Learning, Quiz, etc.)
   - Implemented React Router with protected routes
   - Built API service layer with Axios
-  - Designed responsive CSS with IBM Carbon inspiration
+  - Designed responsive CSS with modern design system inspiration
   - Integrated Recharts for data visualization
 
-**Example**: Bob created the EngineerDashboard that shows:
+**Example**: The AI assistant created the EngineerDashboard that shows:
 - Pending actions (highlighted)
 - Assigned learning modules with progress
 - Access request status
@@ -255,7 +255,7 @@ Bob, the AI coding assistant, was instrumental in accelerating development acros
 
 #### 4. **Data Visualization**
 - **Task**: Add progress tracking with charts
-- **Bob's Contribution**:
+- **AI Assistant Contribution**:
   - Implemented pie charts for module status distribution
   - Created progress bars for completion tracking
   - Added quiz performance visualization
@@ -263,7 +263,7 @@ Bob, the AI coding assistant, was instrumental in accelerating development acros
 
 #### 5. **Automation & Workflows**
 - **Task**: Automate onboarding workflows
-- **Bob's Contribution**:
+- **AI Assistant Contribution**:
   - Designed workflow engine that triggers on engineer assignment
   - Implemented language detection for repositories
   - Created smart module assignment logic
@@ -271,7 +271,7 @@ Bob, the AI coding assistant, was instrumental in accelerating development acros
 
 #### 6. **Testing & Documentation**
 - **Task**: Ensure quality and usability
-- **Bob's Contribution**:
+- **AI Assistant Contribution**:
   - Generated sample data for 6 teams, 4 repos, 4 modules
   - Created `test_api.py` for API testing
   - Wrote comprehensive README documentation
@@ -280,15 +280,15 @@ Bob, the AI coding assistant, was instrumental in accelerating development acros
 
 #### 7. **Problem Solving**
 - **Task**: Debug and optimize
-- **Bob's Contribution**:
+- **AI Assistant Contribution**:
   - Fixed CORS issues for frontend-backend communication
   - Resolved port conflicts (killed process on 8080)
   - Optimized JSON file read/write operations
   - Improved error handling and validation
 
-### Development Metrics with Bob
+### Development Metrics with AI Assistant
 
-| Metric | Without Bob | With Bob | Improvement |
+| Metric | Without AI | With AI | Improvement |
 |--------|-------------|----------|-------------|
 | Development Time | 2-3 weeks | 4 days | **75% faster** |
 | Lines of Code | ~3,000 | ~3,000 | Same quality |
@@ -296,7 +296,7 @@ Bob, the AI coding assistant, was instrumental in accelerating development acros
 | Documentation | 2-3 days | 4 hours | **85% faster** |
 | Code Quality | Variable | Consistent | **High quality** |
 
-### Bob's Key Strengths
+### AI Assistant Key Strengths
 
 1. **Rapid Prototyping**: Generated complete features in minutes
 2. **Best Practices**: Applied security (JWT, bcrypt), validation, error handling
@@ -308,13 +308,13 @@ Bob, the AI coding assistant, was instrumental in accelerating development acros
 ### Collaboration Approach
 
 ```
-Developer → Describes requirement → Bob → Generates code → Developer → Reviews & tests → Iterate
+Developer → Describes requirement → AI Assistant → Generates code → Developer → Reviews & tests → Iterate
 ```
 
 **Example Interaction**:
 ```
 Developer: "Create a team management page where admins can configure access requirements"
-Bob: *Generates AdminTeamManagement.jsx with:*
+The AI assistant: *Generates AdminTeamManagement.jsx with:*
   - Team creation form
   - Access requirement configuration
   - Repository assignment
@@ -373,7 +373,7 @@ Bob: *Generates AdminTeamManagement.jsx with:*
   - View team member progress
 
 - **Access Configuration**
-  - Configure platform requirements (GitHub, IBM Cloud, Artifactory, Jira, Access Hub)
+  - Configure platform requirements (GitHub, Cloud Platform, Artifactory, Jira, Access Hub)
   - Set access types (read, write, admin)
   - Enable auto-approval for low-risk platforms
   - Manual approval workflow for critical access
@@ -512,7 +512,7 @@ npm run dev
 3. **Configure Team** (if new)
    - Add access requirements:
      - GitHub (write, required, manual approval)
-     - IBM Cloud (read, required, manual approval)
+     - Cloud Platform (read, required, manual approval)
      - Artifactory (read, required, auto-approve)
      - Jira (write, optional, auto-approve)
    - Assign repositories to team
@@ -850,7 +850,7 @@ Built with modern technologies and best practices for a seamless onboarding expe
 - Lucide React for modern iconography
 
 **Special Thanks**:
-- **Bob (AI Assistant)** for accelerating development by 75%
+- **AI coding assistant** for accelerating development by 75%
 - FastAPI community for excellent documentation
 - React team for powerful UI framework
 - Recharts for beautiful data visualization
@@ -860,6 +860,6 @@ Built with modern technologies and best practices for a seamless onboarding expe
 **Version**: 2.0.0  
 **Last Updated**: June 9, 2026  
 **Status**: ✅ Production Ready  
-**Development Time**: 4 days with Bob AI assistance  
+**Development Time**: 4 days with AI assistance  
 
 **Built with ❤️ for seamless enterprise onboarding**

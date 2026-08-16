@@ -9,7 +9,7 @@
         "auto_approve": false
       },
       {
-        "platform": "ibm_cloud",
+        "platform": "cloud_platform",
         "access_type": "read",
         "required": true,
         "auto_approve": false
@@ -49,7 +49,7 @@
         "auto_approve": false
       },
       {
-        "platform": "ibm_cloud",
+        "platform": "cloud_platform",
         "access_type": "read",
         "required": false,
         "auto_approve": true

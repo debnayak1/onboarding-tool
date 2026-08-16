@@ -133,9 +133,9 @@ export const updateModuleProgress = (userId, moduleId, progressData) =>
 export const getAdminDashboardV2 = () =>
   api.get('/api/v2/admin/dashboard');
 
-// Bob AI Co-pilot API
-export const chatWithBob = (message, userId, role, pageContext) =>
-  api.post('/bob/chat', {
+// AI Co-pilot API
+export const chatWithCopilot = (message, userId, role, pageContext) =>
+  api.post('/copilot/chat', {
     message,
     user_id: userId,
     role,
@@ -144,4 +144,3 @@ export const chatWithBob = (message, userId, role, pageContext) =>
 
 export default api;
 
-// Made with Bob

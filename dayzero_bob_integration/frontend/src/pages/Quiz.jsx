@@ -379,4 +379,3 @@ function Quiz({ user }) {
 
 export default Quiz;
 
-// Made with Bob

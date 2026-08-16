@@ -126,4 +126,3 @@ function AdminTeamManagementSimple() {
 
 export default AdminTeamManagementSimple;
 
-// Made with Bob

@@ -2,7 +2,7 @@
   "mcpServers": {
     "onboarding-platform": {
       "command": "python3",
-      "args": ["backend/bob_mcp_server.py"],
+      "args": ["backend/ai_mcp_server.py"],
       "alwaysAllow": [
         "get_engineer_progress",
         "list_pending_access_requests",

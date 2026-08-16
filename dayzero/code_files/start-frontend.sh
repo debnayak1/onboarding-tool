@@ -19,4 +19,3 @@ echo ""
 
 npm run dev
 
-# Made with Bob

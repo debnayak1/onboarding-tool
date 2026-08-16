@@ -1,13 +1,13 @@
 # 🚀 Onboarding Agent - Team-Based Onboarding Platform
-> **Bob-a-thon Day Zero** — Bob AI co-pilot integration built with IBM Bob
+> **Day Zero** — AI co-pilot integration for the onboarding platform
 
 A comprehensive onboarding platform with **team-based access management** that provides automated workflows, learning modules, access provisioning, and progress tracking with visual analytics.
 
-## 🤖 Bob AI Co-pilot Integration
+## 🤖 AI Co-pilot Integration
 
-Bob is embedded directly into the running application as an AI co-pilot. It operates at three layers:
+An AI co-pilot is embedded directly into the running application. It operates at three layers:
 
-### 1. In-App Chat Widget (`BobCopilot.jsx`)
+### 1. In-App Chat Widget (`AICopilot.jsx`)
 A floating chat panel appears on every authenticated page (bottom-right corner). Engineers and admins can ask questions in plain English and get answers grounded in **live platform data**.
 
 **Engineer examples:**
@@ -21,11 +21,11 @@ A floating chat panel appears on every authenticated page (bottom-right corner).
 - *"Approve all critical requests"*
 - *"Give me a status report"*
 
-### 2. Backend Chat Endpoint (`POST /bob/chat`)
-The chat widget calls `/bob/chat` on the FastAPI backend. The endpoint queries live database state and returns context-aware responses. To upgrade to a real LLM (IBM watsonx.ai, OpenAI), replace the `_resolve_response()` function in `backend/main.py`.
+### 2. Backend Chat Endpoint (`POST /copilot/chat`)
+The chat widget calls `/copilot/chat` on the FastAPI backend. The endpoint queries live database state and returns context-aware responses. To upgrade to a real LLM (a foundation model API, OpenAI), replace the `_resolve_response()` function in `backend/main.py`.
 
-### 3. MCP Server for Bob IDE (`backend/bob_mcp_server.py`)
-A Model Context Protocol server that exposes 7 onboarding platform tools to Bob's IDE extension:
+### 3. MCP Server for IDE Integration (`backend/ai_mcp_server.py`)
+A Model Context Protocol server that exposes 7 onboarding platform tools to an IDE extension:
 
 | Tool | Description |
 |------|-------------|
@@ -37,18 +37,18 @@ A Model Context Protocol server that exposes 7 onboarding platform tools to Bob'
 | `get_system_summary` | Platform-wide stats |
 | `generate_learning_path` | Personalised module ordering |
 
-**Register the MCP server in Bob IDE:**
+**Register the MCP server in your IDE:**
 ```json
 {
   "name": "onboarding-platform",
   "transport": "stdio",
   "command": "python",
-  "args": ["backend/bob_mcp_server.py"]
+  "args": ["backend/ai_mcp_server.py"]
 }
 ```
 
 ### Cross-Session Continuity
-`.bob/context/session-context.md` is a living handoff document. Bob updates it at the end of each session so the next session can resume without re-reading the entire codebase.
+`.bob/context/session-context.md` is a living handoff document. The AI assistant updates it at the end of each session so the next session can resume without re-reading the entire codebase.
 
 ---
 
@@ -75,7 +75,7 @@ A Model Context Protocol server that exposes 7 onboarding platform tools to Bob'
 
 ### For Admins
 - **Team Management**: Create teams, configure access, assign repositories
-- **Access Configuration**: Set platform requirements (GitHub, IBM Cloud, Artifactory, Jira, Access Hub)
+- **Access Configuration**: Set platform requirements (GitHub, Cloud Platform, Artifactory, Jira, Access Hub)
 - **Engineer Assignment**: Assign engineers to teams with automatic workflow execution
 - **Module Configuration**: Set required modules and enable auto-assignment
 - **Progress Monitoring**: Track team member onboarding status
@@ -209,7 +209,7 @@ npm run dev
 ## 📁 Project Structure
 
 ```
-ISL-zSW-Bobathon_dayzero_090626/
+dayzero_bob_integration/
 ├── backend/
 │   ├── main.py              # FastAPI application
 │   ├── requirements.txt     # Python dependencies
@@ -226,7 +226,7 @@ ISL-zSW-Bobathon_dayzero_090626/
 │   └── vite.config.js      # Vite configuration
 ├── docs/
 │   ├── agent-architecture-design.md
-│   ├── ibm-cloud-free-tier-architecture.md
+│   ├── cloud-deployment-architecture.md
 │   └── 3-hour-implementation-guide.md
 ├── start-backend.sh        # Backend startup script
 ├── start-frontend.sh       # Frontend startup script
@@ -269,7 +269,7 @@ ISL-zSW-Bobathon_dayzero_090626/
 ## 🎨 UI Features
 
 - **Responsive Design**: Works on desktop, tablet, and mobile
-- **Modern UI**: Clean, professional interface with IBM Carbon-inspired design
+- **Modern UI**: Clean, professional interface with modern, clean design
 - **Data Visualization**: Pie charts for progress and quiz results using Recharts
 - **Interactive Elements**: Hover effects, smooth transitions
 - **Status Badges**: Color-coded status indicators
@@ -291,7 +291,7 @@ ISL-zSW-Bobathon_dayzero_090626/
 
 ### Production Deployment Options
 1. **Docker**: Use provided Dockerfile
-2. **IBM Cloud Code Engine**: Deploy as containerized app
+2. **Container hosting**: Deploy as containerized app
 3. **Heroku**: Deploy backend and frontend separately
 4. **Vercel/Netlify**: Deploy frontend (static)
 5. **AWS/Azure**: Deploy on cloud infrastructure

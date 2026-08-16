@@ -15,7 +15,7 @@ class Team(BaseModel):
     created_by: Optional[str] = None  # admin user_id
 
 class TeamAccessRequirement(BaseModel):
-    platform: str  # github, ibm_cloud, artifactory, jira, access_hub
+    platform: str  # github, cloud_platform, artifactory, jira, access_hub
     access_type: str  # read, write, admin
     required: bool = True
     auto_approve: bool = False
@@ -117,4 +117,3 @@ class AdminDashboard(BaseModel):
     recent_requests: List[AccessRequestExtended] = []
     completion_stats: Dict = {}
 
-# Made with Bob

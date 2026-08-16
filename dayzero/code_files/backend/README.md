@@ -59,18 +59,12 @@ python main.py
 # Server runs on http://localhost:8080
 ```
 
-## Deploy to IBM Cloud Code Engine
+## Deploy to Container Hosting
 
 ```bash
-# From backend directory
-ibmcloud ce application create \
-  --name onboarding-api \
-  --build-source . \
-  --port 8080 \
-  --cpu 0.125 \
-  --memory 256M \
-  --min-scale 0 \
-  --max-scale 1
+# Build and run the Docker image from the backend directory
+docker build -t onboarding-api .
+docker run -p 8080:8080 onboarding-api
 ```
 
 ## Environment Variables

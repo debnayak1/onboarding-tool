@@ -168,7 +168,7 @@ def setup_backend_team():
                 "auto_approve": True
             },
             {
-                "platform": "ibm_cloud",
+                "platform": "cloud_platform",
                 "access_type": "admin",
                 "required": True,
                 "auto_approve": False
@@ -249,7 +249,7 @@ def setup_fullstack_team():
                 "auto_approve": True
             },
             {
-                "platform": "ibm_cloud",
+                "platform": "cloud_platform",
                 "access_type": "write",
                 "required": True,
                 "auto_approve": False
@@ -322,7 +322,7 @@ def main():
     print("3. Click 'View Details' on any team")
     print("4. Click 'Assign Engineer' to see the activity list!")
     print("\nEach team now has:")
-    print("  • Access requirements (GitHub, IBM Cloud, etc.)")
+    print("  • Access requirements (GitHub, Cloud Platform, etc.)")
     print("  • Repositories to access")
     print("  • Learning modules to complete")
     print("\n" + "=" * 70)
@@ -330,4 +330,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-# Made with Bob
